@@ -1,4 +1,32 @@
-# Getting Started with Create React App
+# Doctor Rise of Kingdoms
+
+This project is to build a website to share information about the mobile game 'Rise of Kingdoms' and brush up my web development and testing skills
+
+## Getting Started
+
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+
+### Installing
+
+yarn build
+
+### Running
+
+yarn start
+
+### Running the tests
+
+yarn test
+
+### Built with
+
+Frontend: React JS, Material UI
+Backend: Node JS, Heroku
+Database: Heroku Postgres
+
+--------------------------------------------------
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

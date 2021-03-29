@@ -22,6 +22,8 @@ import {mainListItems, secondaryListItems} from './ListItems';
 import {Switch, Route} from 'react-router-dom';
 import Commanders from './Commanders';
 import Calculator from './Calculator';
+import Equipment from './Equipment';
+import Database from './Database';
 
 function Copyright() {
   return (
@@ -181,6 +183,12 @@ export default function Dashboard() {
                 <Switch>
                   <Route path="/Commanders">
                     <Commanders />
+                  </Route>
+                  <Route path="/Equipment">
+                    <Equipment />
+                  </Route>
+                  <Route path="/Database">
+                    <Database />
                   </Route>
                   <Route path="/Calculator">
                     <Calculator />

@@ -14,43 +14,37 @@ import {Link} from 'react-router-dom';
 export const mainListItems = (
   <div>
     <Link to="/Commanders">
-    <ListItem button>
-      
+      <ListItem button>
         <ListItemIcon>
           <DashboardIcon />
         </ListItemIcon>
-        <ListItemText primary="Dashboard" />
-      
-    </ListItem>
+        <ListItemText primary="Commanders" />
+      </ListItem>
     </Link>
-    <Link to="/Calculator">
-    <ListItem button>
-      
+    <Link to="/Equipment">
+      <ListItem button>
         <ListItemIcon>
          <ShoppingCartIcon />
         </ListItemIcon>
-        <ListItemText primary="Orders" />
-      
-    </ListItem>
+        <ListItemText primary="Equipment" />
+      </ListItem>
     </Link>
-    <ListItem button>
-      <ListItemIcon>
-        <PeopleIcon />
-      </ListItemIcon>
-      <ListItemText primary="Customers" />
-    </ListItem>
-    <ListItem button>
-      <ListItemIcon>
-        <BarChartIcon />
-      </ListItemIcon>
-      <ListItemText primary="Reports" />
-    </ListItem>
-    <ListItem button>
-      <ListItemIcon>
+    <Link to="/Database">
+      <ListItem button>
+        <ListItemIcon>
+          <PeopleIcon />
+        </ListItemIcon>
+        <ListItemText primary="Database" />
+      </ListItem>
+    </Link>
+    <Link to="/Calculator">
+      <ListItem button>
+        <ListItemIcon>
         <LayersIcon />
-      </ListItemIcon>
-      <ListItemText primary="Integrations" />
-    </ListItem>
+        </ListItemIcon>
+        <ListItemText primary="Calculator" />
+      </ListItem>
+    </Link>
   </div>
 );
 

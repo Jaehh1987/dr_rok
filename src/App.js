@@ -1,10 +1,11 @@
 import './App.css';
 import Album from './Album';
+import Dashboard from './Components/Dashboard';
 
 function App() {
   return (
     <div className="App">
-      <Album></Album>
+      <Dashboard></Dashboard>
     </div>
   );
 }

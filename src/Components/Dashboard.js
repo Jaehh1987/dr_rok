@@ -19,16 +19,16 @@ import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import {mainListItems, secondaryListItems} from './ListItems';
-// import Chart from './Chart';
-// import Deposits from './Deposits';
-// import Orders from './Orders';
+import {Switch, Route} from 'react-router-dom';
+import Commanders from './Commanders';
+import Calculator from './Calculator';
 
 function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
       {'Copyright © '}
       <Link color="inherit" href="https://material-ui.com/">
-        Your Website
+        Dr. Rise of Kingdoms
       </Link>{' '}
       {new Date().getFullYear()}
       {'.'}
@@ -143,7 +143,7 @@ export default function Dashboard() {
             <MenuIcon />
           </IconButton>
           <Typography component="h1" variant="h6" color="inherit" noWrap className={classes.title}>
-            Dashboard
+            Dr. Rise of Kingdoms
           </Typography>
           <IconButton color="inherit">
             <Badge badgeContent={4} color="secondary">
@@ -177,6 +177,16 @@ export default function Dashboard() {
             <Grid item xs={12} md={8} lg={9}>
               <Paper className={fixedHeightPaper}>
                 {/* <Chart /> */}
+
+                <Switch>
+                  <Route path="/Commanders">
+                    <Commanders />
+                  </Route>
+                  <Route path="/Calculator">
+                    <Calculator />
+                  </Route>
+                </Switch>
+
               </Paper>
             </Grid>
             {/* Recent Deposits */}

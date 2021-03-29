@@ -1,11 +1,13 @@
 import './App.css';
-import Album from './Album';
 import Dashboard from './Components/Dashboard';
+import { BrowserRouter } from 'react-router-dom';
 
 function App() {
   return (
     <div className="App">
-      <Dashboard></Dashboard>
+      <BrowserRouter>
+        <Dashboard></Dashboard>
+      </BrowserRouter>
     </div>
   );
 }

@@ -21,7 +21,7 @@ import NotificationsIcon from '@material-ui/icons/Notifications';
 import {mainListItems, secondaryListItems} from './ListItems';
 import {Switch, Route} from 'react-router-dom';
 import Commanders from './Commanders';
-import Calculator from './Calculator';
+import Calculator from './Calculator/Calculator';
 import Equipment from './Equipment';
 import Database from './Database';
 

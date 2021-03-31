@@ -12,16 +12,18 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
-import Link from '@material-ui/core/Link';
+import { Link, useRouteMatch } from 'react-router-dom';
 
-const calculators = [
+const calculator_list = [
   {
     img: "./calculators/resource.png",
-    desc: "Resource"
+    desc: "Resource",
+    link: "resource"
   },
   {
     img: "./calculators/speedup.png",
-    desc: "Speedup"
+    desc: "Speedup",
+    link: "speedup"
   }];
 
 const useStyles = makeStyles((theme) => ({
@@ -36,22 +38,24 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: 'column',
   },
   cardMedia: {
-    paddingTop: '100%', // 16:9
+    paddingTop: '100%'
   },
   cardContent: {
     flexGrow: 1,
   }
 }));
 
-export default function Calculator() {
+export default function CalculatorList() {
   const classes = useStyles();
+  var match = useRouteMatch();
 
   return (
     <React.Fragment>
       <Container className={classes.cardGrid} maxWidth="md">
-          <Grid container spacing={4}>
-            {calculators.map((calculator) => (
-              <Grid item key={calculator} xs={12} sm={4} md={3}>
+        <Grid container spacing={4}>
+          {calculator_list.map((calculator) => (
+            <Grid item key={calculator} xs={12} sm={4} md={3}>
+              <Link to={`${match.url}/${calculator.link}`}>
                 <Card className={classes.card}>
                   <CardMedia
                     className={classes.cardMedia}
@@ -64,10 +68,11 @@ export default function Calculator() {
                     </Typography>
                   </CardContent>
                 </Card>
-              </Grid>
-            ))}
-          </Grid>
-        </Container>
+              </Link>
+            </Grid>
+          ))}
+        </Grid>
+      </Container>
     </React.Fragment>
   );
 }
